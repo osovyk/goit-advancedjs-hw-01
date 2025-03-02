@@ -67,14 +67,10 @@ const images = [
 ];
 
 const refs = {
-  main: document.querySelector('#main'),
+  gallery: document.querySelector('.gallery'),
 };
 
-const ul = document.createElement('ul');
-ul.className = 'gallery';
-refs.main.appendChild(ul);
-
-ul.innerHTML = images
+refs.gallery.innerHTML = images
   .map(({ preview, original, description }) => `
     <li class="gallery-item">
       <a class="gallery-link" href="${original}">
